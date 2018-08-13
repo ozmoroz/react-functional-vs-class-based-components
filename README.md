@@ -1,4 +1,4 @@
-# react-pass-parameter-to-onClick
+# react-functional-vs-class-based-components
 This project demonstrates the difference between functional and class-based React components.
 
 To run this project in browser:
