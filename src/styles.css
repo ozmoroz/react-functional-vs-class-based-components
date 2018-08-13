@@ -2,3 +2,12 @@
   font-family: sans-serif;
   text-align: center;
 }
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+input {
+  margin: 0 1rem;
+}

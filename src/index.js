@@ -1,20 +1,20 @@
-import * as React from "react";
-import ReactDOM from "react-dom";
+import * as React from 'react';
+import ReactDOM from 'react-dom';
 
-import "./styles.css";
+import './styles.css';
 
 // Functional component
 const MyHello = props => {
-  return <h2>Hello, {props.name}</h2>;
+  return <div>Hello, {props.name}</div>;
 };
 
 // Functional component using ES6 arrow function expression
-const MyHello2 = props => <h2>Hello, {props.name}</h2>;
+const MyHello2 = props => <div>Hello, {props.name}</div>;
 
 // Class-based component
 class MyHello3 extends React.Component {
   render() {
-    return <h2>Hello, {this.props.name}</h2>;
+    return <div>Hello, {this.props.name}</div>;
   }
 }
 
@@ -31,9 +31,9 @@ class MyHello4 extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <h2>
+        <div>
           Hello, {this.props.name} {this.state.counter} times
-        </h2>
+        </div>
         <button onClick={this.incrementCounter}>Say it again</button>
       </React.Fragment>
     );
@@ -56,6 +56,7 @@ class MyHello5 extends React.Component {
   }
   render() {
     // ...
+    return <div>...</div>;
   }
 }
 
@@ -85,15 +86,24 @@ class MyHello6 extends React.Component {
 const App = () => {
   return (
     <div className="App">
-      <h1>Functional and class-based components</h1>
+      <h1>Functional and class-based React components</h1>
+      <h2>A basic functional component</h2>
       <MyHello name="Sergey" />
+
+      <h2>A functional component using ES6 arrow function expression</h2>
       <MyHello2 name="Sergey" />
+
+      <h2>A basic class-based component"</h2>
       <MyHello3 name="Sergey" />
+
+      <h2>A class-based component with state</h2>
       <MyHello4 name="Sergey" />
+
+      <h2>A class-based component with a ref to a DOM element</h2>
       <MyHello6 />
     </div>
   );
 };
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root');
 ReactDOM.render(<App />, rootElement);
