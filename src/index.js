@@ -83,6 +83,33 @@ class MyHello6 extends React.Component {
   }
 }
 
+// Class-based component with shouldComponentUpdate lifecycle method
+class MyHello7 extends React.Component {
+  shouldComponentUpdate(nextProps, nextState) {
+    let condition; // True or false
+    // ...
+    // Return true if the component should re-render
+    if (condition) return true;
+    // Return false if the component should NOT re-render
+    else return false;
+  }
+
+  render() {
+    // ...
+    return <div>...</div>;
+  }
+}
+
+// Class-based component derived from React.PureComponent
+class MyHello8 extends React.PureComponent {
+  // All you need to do is to extend React.PureComponent
+  // instead od React.Component.
+
+  render() {
+    return <div>Hello, {this.props.name}</div>;
+  }
+}
+
 const App = () => {
   return (
     <div className="App">
@@ -101,6 +128,9 @@ const App = () => {
 
       <h2>A class-based component with a ref to a DOM element</h2>
       <MyHello6 />
+
+      <h2>Class-based component derived from React.PureComponent</h2>
+      <MyHello8 name="Sergey" />
     </div>
   );
 };
