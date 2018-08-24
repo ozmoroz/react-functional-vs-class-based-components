@@ -52,7 +52,7 @@ class MyHello5 extends React.Component {
   }
   componentWillUnmount() {
     // The component is about to be unmounted - clean up
-    // ...abstract
+    // ...
   }
   render() {
     // ...
@@ -103,7 +103,7 @@ class MyHello7 extends React.Component {
 // Class-based component derived from React.PureComponent
 class MyHello8 extends React.PureComponent {
   // All you need to do is to extend React.PureComponent
-  // instead od React.Component.
+  // instead of React.Component.
 
   render() {
     return <div>Hello, {this.props.name}</div>;
